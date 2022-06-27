@@ -29,11 +29,13 @@ useEffect(()=> {
         </div>
 
         <Info>
+          <div>
           <Button className={activeTab === 'instructions' ? 'active' : ''} 
             onClick={() => setActiveTab('instructions')}>Instructions</Button>
           
           <Button className={activeTab === 'ingredients' ? 'active' : ''} 
             onClick={() => setActiveTab('ingredients')}>Ingredients</Button>
+            </div>
 
             { activeTab === 'instructions' && <div>
               <p dangerouslySetInnerHTML={{ __html: details.instructions }}></p>
@@ -53,6 +55,7 @@ const DetailWrapper = styled.div`
   margin-top: 10rem;
   margin-bottom: 5rem;
   display: flex;
+
   .active {
     background: linear-gradient(35deg, #494949, #313131);
     color: #fff;
@@ -65,6 +68,7 @@ const DetailWrapper = styled.div`
     li {
       font-size: .8rem;
       line-height: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     ul {
@@ -78,16 +82,23 @@ const DetailWrapper = styled.div`
 `
 
 const Button = styled.button`
-  padding: 1rem 1rem;
+  padding: 1rem .6rem;
+  margin-bottom: 2rem;
   color: #313131;
   background: #fff;
   border: 2px solid black;
-    margin-right: 2rem;
+    margin-right: 1rem;
     font-weight: 600;
     cursor: pointer;
+    font-size: .8rem;
+    border-radius: .5rem;
 `
 
 const Info = styled.div`
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin-left: 2rem;
   
 `
