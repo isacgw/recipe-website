@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
+import { GiForkKnifeSpoon } from 'react-icons/gi'
 
 
 const Search = () => {
@@ -18,6 +19,7 @@ const Search = () => {
 
   return (
     <FormStyle onSubmit={handleSubmit}>
+        <GiForkKnifeSpoon/>
         <h2>What do you want to eat today?</h2>
         <div>
             <FaSearch/>

@@ -19,7 +19,8 @@ const NavWrapper = styled.div `
     justify-content: flex-start;
     align-items: center;
     gap: .2rem;
-    margin: 3rem 0;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 
     svg {
         font-size: 2rem;
